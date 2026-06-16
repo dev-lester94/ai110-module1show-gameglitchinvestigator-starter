@@ -5,6 +5,9 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+
+The game has two sections. The is a side bar for the settings to set the diffulty, tells us to guess a number between 1 - 100, and the attempts allowed. The main screen displays the name of the game, a brief description, tells us to guess a number from 1 - 100 with the attemps allowed left, a developer debugger info section, an input to enter the guess, and three buttons to submit guess, new game, and to show hints, and lastly a brief footer message. I'm able to enter a number and it shows whether I should guess next a higher or lower number with the number of attempts left.
+
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
 
@@ -14,9 +17,12 @@ Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 |-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
+|Guess 6|   Go higher       |  Go lower       | None                   |
+|Guess 90|   Go lower       |  Go higher      | None                   | 
+|Guess 10014| Not allowed guess |  Go higher  | None                   |
+|Guess -20 | Not allowed guess | Go lower     | None                   |
+|Guess 193.2 | Not allowed guess | Go lower   | None                   |
+
 
 ---
 
