@@ -25,19 +25,49 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [X] Describe the game's purpose.
+   Guess the secret number between 1 to X depneding on the game mode.
+- [X] Detail which bugs you found.
+   Found bug where the message of telling the user to guess higher or lower is incorrect.
+   Found bug where user can enter a decimal number and it will truncate it and compare to the secret which
+   Found bug where user can enter a number out of the game settings range and it will say to go higher or lower.
+   Found bug where the secret can be set outside the game settings range  
+- [X] Explain what fixes you applied.
+   Fix was to correct tell the user to guess higher or lower depending on the conditional between whether the guess was lower or higher than the secret.
+   When user enters a decimal it displays to the user to Please enter a whole number.
+   When user enters a number out of the range like 100 where the range is between 1 and 50 it displays Please enter a number between 1 and 50.
+   When I change the game setting and hit new game, the secret number should be a number in range of the game setting in the developer mode section.
+
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. User enters a guess of 40
+2. Game returns "Too Low"
+3. User enters a guess of 70 → "Too High"
+4. Score updates correctly after each guess
+5. Game ends after the correct guess
+
+1. User enters a guess of 7.8
+2. Game returns Please enter a whole number.
+3. User enters a guess of 50 → "Too High"
+4. Score updates correctly after each guess
+5. Game ends after the correct guess
+
+1. User enters a guess of 0
+2. Game returns Please enter a number between 1 and 100.
+3. User enters a guess of 50 → "Too High"
+4. Score updates correctly after each guess
+5. Game ends after the correct guess
+
+1. User enters a guess of 100 when game setting is hard (1 to 50)
+2. Game returns Please enter a number between 1 and 50.
+3. User enters a guess of 38 → "Too High"
+4. Score updates correctly after each guess
+5. Game ends after the correct guess
+
+
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
@@ -46,7 +76,7 @@ Describe your fixed game in numbered steps so a reader can follow along without 
 ```
 # Paste your pytest output here, e.g.:
 # pytest tests/
-# ========================= X passed in 0.XXs =========================
+#========================================== 20 passed in 0.09s ===========================================
 ```
 
 ## 🚀 Stretch Features
